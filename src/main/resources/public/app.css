@@ -56,7 +56,7 @@
   margin-bottom: auto;
 }
 .cback{
-  padding: 1em;
+  padding: 2em;
   height: 100vh;
   padding-bottom: 8em;
   background: rgba(255, 255, 255, 0.9);
@@ -66,4 +66,7 @@ hr{
 }
 .cback li{
   font-size: 2vmin;
+}
+.cback a{
+  font-size: 1.4vmin;
 }
