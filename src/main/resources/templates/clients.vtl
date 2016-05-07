@@ -1,0 +1,24 @@
+<div class="jumbotron">
+<h1>Clients:</h1>
+</div>
+<ul>
+  #foreach($client in $clients)
+  <div class="row">
+    <div class="col-md-6">
+       <li><span style="font-weight: bold;">Client:</span> $client.getLastName(), $client.getFirstName()
+          <ul><li><span style="font-weight: bold;">Stylist:</span> $client.getStylist()</li>
+              <li><span style="font-weight: bold;">Gender:</span> $client.getGender()</li>
+              <li><span style="font-weight: bold;">Age:</span> $client.getAge()</li>
+          </ul></li>
+      </div>
+      <div class="col-md-6">
+        <form action="/delete/$client.getUrlName()" method="post">
+          <button class="btn btn-lg btn-danger pull-right" type="submit">DELETE</button>
+        </form>
+      </div>
+    </div>
+    <hr>
+  #end
+</ul>
+
+<a href="/clients/new">Add a New Client</a>

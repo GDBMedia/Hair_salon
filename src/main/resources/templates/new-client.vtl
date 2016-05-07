@@ -1,0 +1,36 @@
+<div class="jumbotron">
+<h1>New Client Form</h1>
+</div>
+
+
+<form action="/clients" method="post">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" name="firstName" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" name="lastName" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="stylist">Stylist:</label>
+    <select id="stylist" name="stylist" class="form-control">
+      #foreach($stylist in $stylists)
+        <option value="$stylist.getFirstName() $stylist.getLastName()">$stylist.getLastName(), $stylist.getFirstName() ($stylist.getSpecialty()), $stylist.getGender()</option>
+      #end
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" class="form-control">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input id="age" name="age" type="number" min="0" max="80" class="form-control">
+  </div>
+
+  <button class="btn btn-lg btn-success" type="submit">Submit</button>
+</form>

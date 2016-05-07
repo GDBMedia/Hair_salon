@@ -1,0 +1,27 @@
+<div class="jumbotron">
+<h1>Stylists:</h1>
+</div>
+
+
+<ul >
+  #foreach($stylist in $stylists)
+  <div class="row">
+    <div class="col-md-6">
+       <li><a href="/stylists/$stylist.getUrlName()">$stylist.getLastName(), $stylist.getFirstName()</a>
+          <ul class="clearfix"><li><span style="font-weight: bold;">Specialty:</span> $stylist.getSpecialty()</li>
+              <li><span style="font-weight: bold;">Gender:</span> $stylist.getGender()</li>
+              <li><span style="font-weight: bold;">Age:</span> $stylist.getAge()</li>
+              <li><span style="font-weight: bold;">Number of Clients:</span> $stylist.countClients()</li>
+          </ul></li>
+      </div>
+        <div class="col-md-6">
+          <form action="/fire/$stylist.getUrlName()" method="post">
+            <button class="btn btn-lg btn-danger pull-right fix" type="submit">FIRE</button>
+          </form>
+        </div>
+      </div>
+    <hr>
+  #end
+</ul>
+
+<a href="/stylists/new">Add a New Stylist</a>
