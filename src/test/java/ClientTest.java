@@ -14,6 +14,8 @@ public class ClientTest {
     try(Connection con = DB.sql2o.open()) {
       String sql = "DELETE FROM clients *;";
       con.createQuery(sql).executeUpdate();
+      sql = "DELETE FROM stylists *;";
+      con.createQuery(sql).executeUpdate();
     }
   }
 
