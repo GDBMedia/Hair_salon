@@ -20,7 +20,7 @@ public class ClientTest {
   }
 
   @Test
-  public void Restaurant_instantiatesCorrectly_true() {
+  public void Client_instantiatesCorrectly_true() {
     Client myClient = new Client("John", "Jacob", "Bernie Mac", "Male", "18");
     assertEquals(true, myClient instanceof Client);
   }
@@ -89,7 +89,7 @@ public class ClientTest {
   }
 
   @Test
-  public void find_findsRestuarantInDatabase_true() {
+  public void find_findsClientInDatabase_true() {
     Client myClient = new Client("John", "Jacob", "Bernie Mac", "Male", "18");
     myClient.save();
     Client savedClient = Client.find(myClient.getFirstName(), myClient.getLastName());

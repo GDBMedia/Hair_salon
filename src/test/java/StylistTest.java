@@ -26,43 +26,43 @@ public class StylistTest {
   }
 
   @Test
-  public void getFirstName_restInstantiatesWithName_String() {
+  public void getFirstName_StylistInstantiatesWithName_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("John", myStylist.getFirstName());
   }
 
   @Test
-  public void getLastName_restInstantiatesWithName_String() {
+  public void getLastName_StylistInstantiatesWithName_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("Jacob", myStylist.getLastName());
   }
 
   @Test
-  public void getName_restInstantiatesWithName_String() {
+  public void getName_StylistInstantiatesWithName_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("John Jacob", myStylist.getName());
   }
 
   @Test
-  public void getNameUrl_restInstantiatesWithName_String() {
+  public void getNameUrl_StylistInstantiatesWithName_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("John-Jacob", myStylist.getUrlName());
   }
 
   @Test
-  public void getSpecialty_restInstantiatesWithCuisine_String() {
+  public void getSpecialty_StylistInstantiatesWithCuisine_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("Men's Hair", myStylist.getSpecialty());
   }
 
   @Test
-  public void getGender_restInstantiatesWithDescription_String() {
+  public void getGender_StylistInstantiatesWithDescription_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("Male", myStylist.getGender());
   }
 
   @Test
-  public void getAge_restInstantiatesWithDish_String() {
+  public void getAge_StylistInstantiatesWithDish_String() {
     Stylist myStylist = new Stylist("John", "Jacob", "Men's Hair", "Male", "27");
     assertEquals("27", myStylist.getAge());
   }
